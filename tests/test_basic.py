@@ -5,7 +5,10 @@ Created on Wed Dec  4 10:59:23 2019
 @author: tinivella
 """
 
+<<<<<<< HEAD
 from pathlib import Path
+=======
+>>>>>>> 19c2a4f48d42fb6fce457871005a17470af3d0f8
 import pandas as pd
 import numpy as np
 
@@ -14,6 +17,7 @@ from plotly.offline import plot
 from plotly.subplots import make_subplots
 from plotly.colors import sequential
 
+<<<<<<< HEAD
 import sys, os
 import unittest
 
@@ -25,13 +29,27 @@ try:
     from iomyfiles import WaveformsMatFilePC41, ExcelRequirements105
 except:
     print(sys.exc_info())
+=======
+import macpath
+
+
+# import sys
+# sys.path.append('../')
+
+from importmyfiles import plot_kpi_comparison, WaveformsMatFilePC41, ExcelRequirements105
+>>>>>>> 19c2a4f48d42fb6fce457871005a17470af3d0f8
 
 def test_plot_kpi_comparison():
 
     import plotly.express as px
 
+<<<<<<< HEAD
     sims_excel_list=[abs_dirname+r"/data/requirements_foo_dcm.xlsx"]
     # sims_df = pd.DataFrame()
+=======
+    sims_excel_list = [r"../data/requirements_foo_dcm.xlsx"]
+    sims_df = pd.DataFrame()
+>>>>>>> 19c2a4f48d42fb6fce457871005a17470af3d0f8
     sims_df = pd.read_excel(io=sims_excel_list[0], sheet_name='Simulations', header=1)
     sims_df.dropna(axis=1, how='all')
     Po_max=65e3
@@ -60,6 +78,7 @@ def test_plot_kpi_comparison():
                         fig_filename = "KPI_OPN")
 
 def test_WaveformsMatFilePC41():
+<<<<<<< HEAD
     read_mat_filename = abs_dirname + r"/data/TPFC_waveforms.mat"
     write_mat_filename = abs_dirname + r"/data/TPFC_waveforms_list.mat"
 
@@ -98,6 +117,17 @@ if __name__ == '__main__':
     from iomyfiles.helpers_plot import plot_kpi_comparison
     from iomyfiles import WaveformsMatFilePC41, ExcelRequirements105
 
+=======
+    pc41_wfm = WaveformsMatFilePC41(mat_filename = r"../data//TPFC_waveforms.mat")
+    simulations_list, mat_recarray = WaveformsMatFilePC41.load_mat_file(mat_filename = r"../data//TPFC_waveforms.mat")
+    # WaveformsMatFilePC41.save_mat_file(mat_filename= r"../data//TPFC_waveforms_exp.mat", mat_recarray = mat_recarray)
+    WaveformsMatFilePC41.save_mat_file(mat_filename = r"../data//TPFC_waveforms_list.mat", list_of_dict = simulations_list)
+
+def test_ExcelRequirements105():
+    req_105 = ExcelRequirements105(requirements_filename= r"../data//requirements_foo_dcm.xlsx")
+
+if __name__ == '__main__':
+>>>>>>> 19c2a4f48d42fb6fce457871005a17470af3d0f8
 
     test_plot_kpi_comparison()
     test_WaveformsMatFilePC41()

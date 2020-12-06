@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # -*- coding: utf-8 -*-
 
 import setuptools
@@ -28,4 +29,17 @@ setup(
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
     ], 
+=======
+from setuptools import setup, find_packages
+
+setup(
+    name='importmyfiles',
+    version='',
+    packages=find_packages(),
+    url='',
+    license='',
+    author='riccardo tinivella',
+    author_email='tinix84@gmail.com',
+    description='collections of tools to load/import different file format'
+>>>>>>> 19c2a4f48d42fb6fce457871005a17470af3d0f8
 )

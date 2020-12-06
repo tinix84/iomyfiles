@@ -5,3 +5,4 @@
 CSC_CE_EMV_mes
 /tests/data/CSVreadANDplot
 /tests/data/TPFC_waveforms_list.mat
+*.pyc
