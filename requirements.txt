@@ -30,7 +30,7 @@ incremental==16.10.1
 ipython==7.13.0
 ipython-genutils==0.2.0
 jedi==0.15.2
-Jinja2==2.10.1
+Jinja2==2.11.3
 jinja2-time==0.2.0
 jsonpatch==1.22
 jsonpointer==2.0
